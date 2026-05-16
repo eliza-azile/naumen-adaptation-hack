@@ -88,5 +88,4 @@ export const people = [
 ];
 
 export const hrMetrics = [];
-
 export const ganttData = [];
