@@ -3,7 +3,7 @@ import { Milestone } from "lucide-react";
 export const currentUser = {
     id: 1,
     name: 'Панда ТапТапыч',
-    photo: '\src\assets\red-panda-emoji.png',
+    photo: '/src/assets/red-panda-emoji.png',
     grade: 'Стажер',
     city: 'Екатеринбург',
     interests: ['Бисероплетение', 'Скейтбординг', 'Скроллинг'],
