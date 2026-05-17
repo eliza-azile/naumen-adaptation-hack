@@ -1,16 +1,48 @@
-# React + Vite
+# ПандаТап — геймифицированная адаптация сотрудников
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-платформа для прохождения испытательного срока. Новичок получает чек-листы, чат-бота, ежедневные отчёты с оценкой эмоций, афишу мероприятий и знакомства. HR — дашборд с аналитикой, графиками и диаграммой Ганта для отслеживания рисков.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React (Vite)
+- React Router v6
+- CSS Modules
+- Recharts (графики)
+- localStorage (хранение отчётов)
 
-## React Compiler
+## Тестовые учетки
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Логин          | Пароль   | Роль      |
+| -------------- | -------- | --------- |
+| Панда ТапТапыч | panda123 | Сотрудник |
 
-## Expanding the ESLint configuration
+## Структура проекта
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── pages/
+│   ├── ProfilePage/      # карточка сотрудника
+│   ├── ProgressPage/     # прогресс + чек-лист
+│   ├── ChatPage/         # чат-бот с пандой
+│   ├── FormPage/         # ежедневный отчёт (эмоции 1–5)
+│   └── HRDashboard/      # дашборд с графиками и Gantt
+├── components/           # переиспользуемые UI
+├── mocks/               # моковые данные
+└── assets/              # изображения
+```
+
+## Функционал MVP
+
+- Авторизация (сотрудник / HR)
+- Ежедневный отчёт с эмоциональной шкалой (1–5)
+- Анонимная / открытая обратная связь
+- Чек-лист адаптации + прогресс-бар
+- Чат-бот на ключевых фразах
+- HR-дашборд: эмоции, выгорание, обратная связь, запросы, популярность разделов, Gantt-диаграмма с подсветкой рисков
+- Хранение отчётов в localStorage
+
+## Что не реализовано
+
+- Уведомления
+- Роль наставника
+- Пасхалки
