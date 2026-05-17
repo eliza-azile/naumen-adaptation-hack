@@ -1,68 +1,74 @@
 .card {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 350px;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
+.headerRow {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.avatarWrapper {
+    margin-top: 5px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #464646;
+    background-color: none;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+    object-fit: cover;
+    display: block;
+    width: 75%;
+    height: 75%;
 }
 
-.name {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
+.mainInfo h2{
+    color: #464646;
+    text-align: start;
+    margin: 20px 0 0 40px;
+    font-weight: bold;
+    font-size: 32px;
 }
 
-.grade {
-  margin: 4px 0 0;
-  color: #666;
-  font-size: 14px;
+.mainInfo p {
+    margin-left: 40px;
+    text-align: start;
+    text-decoration: underline #FF6720;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    font-size: 20px;
 }
 
-.info {
-  margin-bottom: 20px;
-  padding: 12px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+.propertiesGrid {
+    display: grid;
+    text-align: start;
+    grid-template-columns: 330px 1fr;
+    gap: 32px;
+    margin-left: 152px;
+    margin-bottom: 88px;
+    font-size: 20px;
+    color:#464646;
 }
 
-.info p {
-  margin: 8px 0;
-  color: #555;
+.label {
+    font-weight: 600;
 }
 
-.statuses {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.value {
+    font-weight: 300;
 }
 
-.toggle {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.toggle input {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
-
-.toggle span {
-  color: #555;
+.link {
+    font-weight: 300;
+    color: #FF6720;
+    text-decoration: underline #FF6720;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: none;
 }

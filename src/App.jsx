@@ -1,56 +1,60 @@
-import { useState } from 'react'
-import Checklist from './components/Checklist'
-import ProgressBar from './components/ProgressBar'
-import UserCard from './components/UserCard'
-import { steps as initialSteps, currentUser } from './mocks/data'
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import './App.css';
+import Layout from './components/Layout';
+import FormPage from './components/Form';
+import Adaptation from './components/Adaptation';
+import UserCard from './components/UserCard';
+import ProgressPage from './components/ProgressPage';
+import EventsPage from './components/EventsPage';
+import ConnectionsPage from './components/ConnectionsPage';
+import futureTask from './assets/futureTask.png';
+import { currentUser } from './mocks/data';
 
-function App() {
-  // Состояние для шагов чеклиста
-  const [steps, setSteps] = useState(initialSteps)
-  
-  // Состояние для пользователя
-  const [user, setUser] = useState(currentUser)
 
-  // Переключение чекбокса в чеклисте
-  const handleToggle = (id) => {
-    console.log('Toggle step:', id)
-    setSteps(prevSteps => 
-      prevSteps.map(step => 
-        step.id === id ? { ...step, done: !step.done } : step
-      )
-    )
-  }
+function AppRoutes() {
+  const [user, setUser] = useState(currentUser);
+  const [showForm, setShowForm] = useState(false);
+  const navigation = useNavigate(); // ✅ теперь useNavigate внутри BrowserRouter
+  const todayTask = { title: 'Посмотреть вводные видео', image: futureTask };
 
-  // Переключение тумблеров в карточке
-  const handleStatusChange = (statusKey) => {
-    console.log('Change status:', statusKey)
+  const handleStatusChange = (updatedStatuses) => {
     setUser(prev => ({
       ...prev,
-      statuses: {
-        ...prev.statuses,
-        [statusKey]: !prev.statuses[statusKey]
-      }
-    }))
-  }
+      statuses: updatedStatuses
+    }));
+  };
 
-  // Считаем прогресс
-  const completedCount = steps.filter(step => step.done).length
-  const progressPercent = (completedCount / steps.length) * 100
+  const handleFormSubmit = (formData) => {
+    console.log('Форма отправлена:', formData);
+    navigation('/profile'); 
+  };
+
+  const handleFormClose = () => {
+    setShowForm(false);
+  };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1>Адаптация сотрудника</h1>
-      
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <UserCard user={user} onStatusChange={handleStatusChange} />
-        
-        <div style={{ minWidth: '300px', flex: 1 }}>
-          <ProgressBar percent={progressPercent} />
-          <Checklist steps={steps} onToggle={handleToggle} />
-        </div>
-      </div>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to="/profile" replace />} />
+        <Route path="/profile" element={<UserCard user={user} onStatusChange={handleStatusChange} />} />
+        <Route path="/adaptation" element={<Adaptation />} />
+        <Route path="/progress" element={<ProgressPage />} />
+        <Route path="/events" element={<EventsPage todayTask={todayTask} onClose={() => setShowForm(false)} />} />
+        <Route path="/connections" element={<ConnectionsPage />} />
+      </Route>
+      <Route path="/form" element={<FormPage todayTask={todayTask} onSubmit={handleFormSubmit} onClose={handleFormClose} />} />
+    </Routes>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}
+
+export default App;

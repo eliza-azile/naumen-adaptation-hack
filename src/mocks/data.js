@@ -1,13 +1,24 @@
 import { Milestone } from "lucide-react";
+import redPandaImg from '../assets/red-panda-emoji.png';
+import baddyImg from '../assets/baddy.png';
+import legendImg from '../assets/LEGEND.png';
+import tarasovaImg from '../assets/TARASOVA.png';
+import kazikovImg from '../assets/KAZIKOV.png';
 
 export const currentUser = {
     id: 1,
     name: 'Панда ТапТапыч',
-    photo: '/src/assets/red-panda-emoji.png',
-    grade: 'Стажер',
+    photo: redPandaImg,
+    specialization: 'Фронтендер',
     city: 'Екатеринбург',
+    grade: 'Стажер',
+    period: '21.04.2026 - 22.07.2026',
+    director: 'Замбаева А. А.',
+    hrbr: 'Криворотов С. П.',
+    achievments: ['Родился (15.05.2012)', 'Отучился на вайбкодинг(29.05.2024)', 'Попал на стажировку (21.04.2026)'],
     interests: ['Бисероплетение', 'Скейтбординг', 'Скроллинг'],
-    statuses: { showInterests: true, interesMero: false, readyToCommunicate: true }
+    team: 'Supermans',
+    statuses: { showInterests: true, eventsInterests: false, readyToCommunicate: true }
 };
 
 export const steps = [
@@ -42,46 +53,61 @@ export const people = [
         {
             id: 1,
             name: 'Панда ТапТапыч',
-            photo: 'src\assets\red-panda-emoji.png',
+            photo: redPandaImg,
+            specialization: 'Бэкендер',
             grade: 'Стажер',
             city: 'Екатеринбург',
+            period: '21.04.2026 - 22.07.2026',
             interests: ['Бисероплетение', 'Скейтбординг', 'Скроллинг'],
+            team: 'Supermans',
             statuses: { showInterests: true, interesMero: false, readyToCommunicate: true }
         },
         {
             id: 2,
             name: 'Бадди',
-            photo: 'src\assets\baddy.png',
+            photo: baddyImg,
+            specialization: 'Аналитик',
             grade: 'Стажер',
             city: 'Екатеринбург',
+            period: '21.04.2026 - 22.07.2026',
             interests: ['Сквошинг', 'Скейтбординг', 'Скроллинг'],
+            team: 'Supermans',
             statuses: { showInterests: false, interesMero: false, readyToCommunicate: true }
         },
         {
             id: 3,
             name: 'ЛЕГЕНДА',
-            photo: 'src\assets\LEGEND.png',
+            photo: legendImg,
+            specialization: 'Фронтендер',
             grade: 'Стажер',
             city: 'Екатеринбург',
+            period: '21.04.2026 - 22.07.2026',
             interests: ['Сквошинг', 'Скейтбординг', 'Скроллинг'],
+            team: 'Supermans',
             statuses: { showInterests: false, interesMero: false, readyToCommunicate: true }
         },
         {
             id: 4,
             name: 'ТАРАСОВА О. А.',
-            photo: 'src\assets\TARASOVA.png',
+            photo: tarasovaImg,
+            specialization: 'Бэкендер',
             grade: 'Стажер',
             city: 'Новосибирск',
+            period: '21.04.2026 - 22.07.2026',
             interests: ['Роллики', 'Скалолазание'],
+            team: 'Supermans',
             statuses: { showInterests: false, interesMero: false, readyToCommunicate: false }
         },
         {
             id: 5,
             name: 'КАЗИКОВ Н. Н.',
-            photo: 'src\assets\KAZIKOV.png',
+            photo: kazikovImg,
+            specialization: 'Фронтендер',
             grade: 'Стажер',
             city: 'Казань',
+            period: '21.04.2026 - 22.07.2026',
             interests: ['Конструирование'],
+            team: 'Supermans',
             statuses: { showInterests: true, interesMero: false, readyToCommunicate: false }
         },
 
