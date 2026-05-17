@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
-import logo from '../assets/25-naumen_orange.png';
+import logo from '../../assets/images/25-naumen_orange.png';
 
 function LoginPage({ onLogin }) {
   const [username, setUsername] = useState('');

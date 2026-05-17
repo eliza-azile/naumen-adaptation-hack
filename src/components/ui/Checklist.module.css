@@ -1,0 +1,64 @@
+.container {
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 30px;
+  text-align: start;
+  font-weight: 800;
+  color: #464646;
+  margin-bottom: 45px;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stepItem {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: start;
+  text-wrap: nowrap;
+  color: #464646;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none; 
+}
+
+.customCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FF671D;
+  border-radius: 4px;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkmark {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.earlyBadge {
+  color: #6AC4B9;
+}
+
+.nextBadge, .arrow {
+  color: #FF671D;
+}

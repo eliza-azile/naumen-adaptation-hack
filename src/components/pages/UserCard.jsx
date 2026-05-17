@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import StatusModal from './StatusModal';
+import StatusModal from '../common/StatusModal';
 import styles from './UserCard.module.css';
 
 

@@ -1,4 +1,4 @@
-import { people } from '../mocks/data';
+import { people } from '../../mocks/data';
 
 
 function ConnectionsPage() {

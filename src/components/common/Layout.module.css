@@ -1,0 +1,308 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: relative; 
+    padding: 3px 15px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoImage {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+
+.title {
+    color:#FF671D;
+    margin: 20px auto 0;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    padding: 15px 20px 0;
+    border-top: 2px solid #FF671D;
+    border-right: 2px solid #FF671D;
+}
+
+.menuTitle {
+    color: #464646;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.link, .activeLink {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    white-space: nowrap;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+    background-color: #FF671D;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logoutButton {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FF6720;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.logoutButton:hover {
+    background: #e55c1a;
+}
+
+.link:hover {
+    background-color: transparent;
+    color: #FF671D;
+    border: 2px solid #FF671D;
+}
+
+.activeLink {
+    color: #FF671D;
+    background-color: transparent;
+    border: 2px solid #FF671D;
+}
+
+.chat {
+    width: 130px;
+    position: fixed;
+    bottom: 160px;
+    left: 35px;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+.panda {
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+    left: 15px;
+    z-index: 1;
+    transition: width 0.3s ease;
+}
+
+.content {
+    padding: 30px 100px;
+    flex: 1;
+    overflow-x: auto;
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+
+/* Планшеты (1024px и меньше) */
+@media (max-width: 1024px) {
+    .content {
+        padding: 30px 40px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .panda {
+        width: 160px;
+    }
+    
+    .chat {
+        width: 100px;
+        bottom: 130px;
+        left: 25px;
+    }
+}
+
+/* Планшеты (850px и меньше) */
+@media (max-width: 850px) {
+    .title {
+        font-size: 24px;
+    }
+    
+    .link, .activeLink {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+    
+    .sidebar {
+        width: 180px;
+    }
+    
+    .content {
+        padding: 20px 30px;
+    }
+    
+    .panda {
+        width: 130px;
+        left: 10px;
+    }
+    
+    .chat {
+        width: 85px;
+        bottom: 110px;
+        left: 20px;
+    }
+}
+
+/* Телефоны (650px и меньше) */
+@media (max-width: 650px) {
+    .title {
+        font-size: 20px;
+    }
+    
+    .logoImage {
+        height: 25px;
+    }
+    
+    .logoutButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .link, .activeLink {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .sidebar {
+        width: 160px;
+        padding: 10px 15px 0;
+    }
+    
+    .menuTitle {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    
+    .menu {
+        gap: 15px;
+    }
+    
+    .content {
+        padding: 15px 20px;
+    }
+    
+    .panda {
+        width: 100px;
+    }
+    
+    .chat {
+        width: 70px;
+        bottom: 90px;
+        left: 15px;
+    }
+}
+
+/* Телефоны (480px и меньше) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 16px;
+    }
+    
+    .logoImage {
+        height: 20px;
+    }
+    
+    .logoutButton {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+    
+    .sidebar {
+        width: 140px;
+    }
+    
+    .menuTitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .link, .activeLink {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    
+    .content {
+        padding: 10px 15px;
+    }
+    
+    .panda {
+        width: 70px;
+    }
+    
+    .chat {
+        width: 55px;
+        bottom: 70px;
+        left: 10px;
+    }
+}
+
+/* Очень маленькие (380px и меньше) */
+@media (max-width: 380px) {
+    .title {
+        font-size: 14px;
+    }
+    
+    .sidebar {
+        width: 120px;
+        padding: 8px 10px 0;
+    }
+    
+    .menuTitle {
+        font-size: 14px;
+    }
+    
+    .link, .activeLink {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+    
+    .panda {
+        width: 55px;
+    }
+    
+    .chat {
+        width: 45px;
+        bottom: 60px;
+    }
+}

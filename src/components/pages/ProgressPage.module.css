@@ -1,0 +1,157 @@
+.container {
+    margin-top: 66px;
+    padding: 0 20px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Прогресс бар секция */
+.progressSection {
+    margin-bottom: 20px;
+}
+
+/* Блок с оставшимися днями - теперь в одну строку */
+.daysBlock {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.daysLabel {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FF671D;
+    text-decoration: underline;
+}
+
+.daysValue {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FF671D;
+    text-shadow: -2px 3px 4px rgba(0,0,0,0.15);
+}
+
+.daysImage {
+    width: 40px;
+    height: auto;
+}
+
+/* Контейнер для чек-листа и мема */
+.contentWrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.checklistWrapper {
+    flex: 2;
+    min-width: 0;
+}
+
+.memWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+}
+
+.mem {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 16px;
+    margin: 350px 5px 0 0;
+}
+
+/* Адаптация для планшетов (до 900px) */
+@media (max-width: 900px) {
+    .contentWrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .memWrapper {
+        position: static;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .mem {
+        max-width: 450px;
+        margin-top: 0;
+    }
+    
+    .daysBlock {
+        gap: 10px;
+    }
+    
+    .daysLabel {
+        font-size: 20px;
+    }
+    
+    .daysValue {
+        font-size: 28px;
+    }
+    
+    .daysImage {
+        width: 35px;
+    }
+}
+
+/* Адаптация для телефонов (до 600px) */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+    
+    .daysBlock {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .daysLabel {
+        font-size: 16px;
+    }
+    
+    .daysValue {
+        font-size: 20px;
+    }
+    
+    .daysImage {
+        width: 28px;
+    }
+    
+    .mem {
+        max-width: 400px;
+    }
+}
+
+/* Очень маленькие телефоны (до 400px) */
+@media (max-width: 400px) {
+    .daysBlock {
+        gap: 6px;
+    }
+    
+    .daysLabel {
+        font-size: 14px;
+    }
+    
+    .daysValue {
+        font-size: 16px;
+    }
+    
+    .daysImage {
+        width: 22px;
+    }
+    
+    .mem {
+        max-width: 350px;
+    }
+}

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from './Adaptation.module.css';
 import branchImg from '../assets/i2.png';
+import { currentUser } from '../../mocks/data';
+import UserCard from './UserCard';
 
 function Adaptation() {
   const [activeStage, setActiveStage] = useState(1);

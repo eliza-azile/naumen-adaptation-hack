@@ -1,0 +1,283 @@
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  min-height: calc(100vh - 80px); /* высота с учётом шапки */
+}
+
+.leftColumn {
+  flex: 2;
+}
+
+.rightColumn {
+  flex: 1;
+  position: relative;
+}
+
+/* Карточки мероприятий */
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.eventCard {
+  background: #f9f9fb;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.eventCard h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1e2a3a;
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailRow {
+  display: flex;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.detailLabel {
+  font-weight: 600;
+  width: 80px;
+  color: #5E6AD2;
+}
+
+/* Блок "Вам может быть интересно" */
+.interestsBlock {
+  background: #f0f4ff;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.tag {
+  background: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #5E6AD2;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.moreTagsBtn {
+  background: none;
+  border: none;
+  color: #5E6AD2;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+/* Правая колонка */
+.suggestBlock {
+  background: #fff7ed;
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.suggestBlock h3 {
+  margin-top: 0;
+  color: #2d3e50;
+}
+
+.suggestBtn {
+  background: #5E6AD2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 20px 0 12px;
+  transition: background 0.2s;
+}
+
+.suggestBtn:hover {
+  background: #4a56b0;
+}
+
+.suggestHint {
+  font-size: 14px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Декоративная ветка (простая svg) */
+.decorativeBranch {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23D4E0A3' d='M85,70 Q70,60 65,45 Q60,30 50,25 Q40,20 35,35 Q30,50 45,55 Q60,60 55,75 Q50,90 70,85 Q90,80 85,70Z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  min-height: calc(100vh - 80px); /* высота с учётом шапки */
+}
+
+.leftColumn {
+  flex: 2;
+}
+
+.rightColumn {
+  flex: 1;
+  position: relative;
+}
+
+/* Карточки мероприятий */
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.eventCard {
+  background: #f9f9fb;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.eventCard h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1e2a3a;
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailRow {
+  display: flex;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.detailLabel {
+  font-weight: 600;
+  width: 80px;
+  color: #5E6AD2;
+}
+
+/* Блок "Вам может быть интересно" */
+.interestsBlock {
+  background: #f0f4ff;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.tag {
+  background: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #5E6AD2;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.moreTagsBtn {
+  background: none;
+  border: none;
+  color: #5E6AD2;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+/* Правая колонка */
+.suggestBlock {
+  background: #fff7ed;
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.suggestBlock h3 {
+  margin-top: 0;
+  color: #2d3e50;
+}
+
+.suggestBtn {
+  background: #5E6AD2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 20px 0 12px;
+  transition: background 0.2s;
+}
+
+.suggestBtn:hover {
+  background: #4a56b0;
+}
+
+.suggestHint {
+  font-size: 14px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Декоративная ветка (простая svg) */
+.decorativeBranch {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23D4E0A3' d='M85,70 Q70,60 65,45 Q60,30 50,25 Q40,20 35,35 Q30,50 45,55 Q60,60 55,75 Q50,90 70,85 Q90,80 85,70Z'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.3;
+  pointer-events: none;
+}
