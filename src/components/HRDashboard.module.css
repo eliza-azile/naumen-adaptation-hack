@@ -1,0 +1,389 @@
+.title {
+    position: relative;
+    top: -80px;
+    left: -30px;
+    font-size: 64px;
+    font-weight: 900;
+    color: #FF671D;
+    text-shadow: 3px 4px 4px rgba(0,0,0,0.25);
+}
+
+.dashboard {
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 284px;
+    min-height: 100vh;
+}
+
+/* Убираем gap на маленьких экранах */
+@media (max-width: 1200px) {
+    .dashboard {
+        gap: 0;
+        flex-direction: column;
+    }
+}
+
+/* Или сделай gap меньше */
+@media (max-width: 1400px) {
+    .dashboard {
+        gap: 0 40px;
+    }
+}
+
+.leftColumn, .rightColumn {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.card {
+  padding: 12px 0; 
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color:#464646;
+    font-weight: 500; 
+    font-size: 28px;
+    text-wrap: wrap;
+}
+
+/* Эмоциональное состояние */
+.emotionMain {
+    color: #464646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.emoji {
+    width: 110px;
+}
+
+.emotionPercent {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4caf50;
+}
+.emotionDetails {
+    text-align: start;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Сгорание */
+.burnout {
+  text-align: center;
+  color: #464646;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burnoutValue {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.burnoutBar {
+  background:#FF671D17;
+  border: 2px solid #FF671D;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
+  overflow: hidden;
+}
+.burnoutFill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.3s;
+}
+.trend {
+  font-size: 13px;
+}
+
+/* Популярность разделов (вертикальные столбцы) */
+.barsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.barWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 26px;
+  width: 100%;
+}
+
+.bar {
+    height: 40px;
+    background: #aaa;
+    transition: width 0.2s;
+    max-width: 100%;
+}
+
+.barHeader {
+    margin-left: 150px;
+}
+
+.barLabel {
+    font-size: 14px;
+    font-weight: 400;
+    color: #464646;
+    width: 120px;
+    flex-shrink: 0;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.barValue {
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 40px;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.requestTitle {
+    text-align: start;
+}
+
+.requestList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.requestCard {
+    background: white;
+    width: 450px;
+    padding: 20px;
+    transition: all 0.2s;
+    border: 2px solid #FF671D;
+}
+
+/* Разный фон в зависимости от статуса */
+.requestCard.pending {
+    background: #FFE7DA;
+}
+
+.requestCard.completed {
+    background: #EBFAE7;
+    opacity: 0.85;
+}
+
+.requestHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.requestContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.requestName {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.requestText {
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* Галочка справа */
+.checkmark {
+    width: 24px;
+    height: 24px;
+    color: #464646;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 48px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Кнопка в правом нижнем углу */
+.requestFooter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.replyBtn {
+    background: #FF671D;
+    color: white;
+    padding: 6px 40px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.replyBtn:hover {
+    background: transparent;
+    border: 2px solid #FF671D;
+    color: #FF671D;
+    transform: scale(1.02);
+}
+
+.doneBadge {
+    color: #4caf50;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Диаграмма Ганта */
+.gantTitle {
+    margin-left: 100px;
+    font-size: 64px;
+    font-weight: 900;
+    color: #FF671D;
+    text-shadow: 3px 4px 4px rgba(0,0,0,0.25);
+}
+
+.ganttCard {
+    color: #464646;
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.ganttTable {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.ganttHeader, .ganttRow {
+    display: flex;
+    align-items: center;
+}
+
+.ganttRow {
+    width: 800px;
+}
+
+.ganttHeader {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+/* Одинаковая ширина для всех колонок */
+.ganttName {
+    width: 120px;
+    flex-shrink: 0;
+    padding: 1px 8px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: right;
+}
+
+.ganttDay {
+    width: 62px;           /* ← одинаковая с ячейкой */
+    flex-shrink: 0;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 11px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+}
+
+.ganttCell {
+    width: 60px;           /* ← одинаковая с днём */
+    height: 44px;
+    flex-shrink: 0;
+    border: 1px solid #eee;
+    cursor: help;
+    transition: all 0.2s;
+}
+
+/* Убираем восклицательные знаки — в ячейке ничего нет */
+.ganttCell:hover {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+/* Строка имени с проблемами */
+.ganttNameWarning {
+    color: #FF1D1D;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Вся строка с проблемами */
+.ganttRowWarning {
+    background-color: rgba(255, 29, 29, 0.05);
+}
+
+.ganttLegend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 140px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+}
+
+.ganttLegend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ganttLegend span span {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 4px;
+}

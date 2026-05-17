@@ -1,0 +1,73 @@
+.card {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.headerRow {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.avatarWrapper {
+    margin-top: 5px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #464646;
+    background-color: none;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    object-fit: cover;
+    display: block;
+    width: 75%;
+    height: 75%;
+}
+
+.mainInfo h2{
+    color: #464646;
+    text-align: start;
+    margin: 20px 0 0 40px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.mainInfo p {
+    margin-left: 40px;
+    text-align: start;
+    text-decoration: underline #FF6720;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    font-size: 20px;
+}
+
+.propertiesGrid {
+    display: grid;
+    text-align: start;
+    grid-template-columns: 330px 1fr;
+    gap: 32px;
+    margin-left: 152px;
+    margin-bottom: 88px;
+    font-size: 20px;
+    color:#464646;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.value {
+    font-weight: 300;
+}
+
+.link {
+    font-weight: 300;
+    color: #FF6720;
+    text-decoration: underline #FF6720;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: none;
+}
