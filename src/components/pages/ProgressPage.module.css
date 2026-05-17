@@ -1,112 +1,157 @@
 .container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-top: 66px;
+    padding: 0 20px;
+    position: relative;
+    min-height: 100vh;
 }
 
-.title {
-    color: #FF671D;
-    font-size: 32px;
-    margin-bottom: 30px;
-    text-align: center;
+/* Прогресс бар секция */
+.progressSection {
+    margin-bottom: 20px;
 }
 
-.stats {
+/* Блок с оставшимися днями - теперь в одну строку */
+.daysBlock {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 30px;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
-.statCard {
-    background: white;
-    border-radius: 16px;
-    padding: 20px 30px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    min-width: 150px;
+.daysLabel {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FF671D;
+    text-decoration: underline;
 }
 
-.statValue {
-    font-size: 36px;
+.daysValue {
+    font-size: 32px;
     font-weight: bold;
     color: #FF671D;
-    display: block;
+    text-shadow: -2px 3px 4px rgba(0,0,0,0.15);
 }
 
-.statLabel {
-    font-size: 14px;
-    color: #666;
-    margin-top: 8px;
-    display: block;
+.daysImage {
+    width: 40px;
+    height: auto;
 }
 
-/* Прогресс-бар */
-.progressWrapper {
+/* Контейнер для чек-листа и мема */
+.contentWrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.checklistWrapper {
+    flex: 2;
+    min-width: 0;
+}
+
+.memWrapper {
     flex: 1;
-    height: 40px;
-    background: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px 0 10px;
-}
-
-.progressFill {
-    height: 100%;
-    background: #6AC4B7;
-    border-radius: 38px;
-    transition: width 0.3s ease;
-}
-
-.percentText {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    text-align: right;
-    display: block;
-    margin-bottom: 30px;
-}
-
-/* Чек-лист */
-.checklist {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.checklistTitle {
-    margin: 0 0 16px 0;
-    color: #464646;
-}
-
-.stepsList {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.stepItem {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
-    padding: 8px;
-    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
 }
 
-.checkbox {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
+.mem {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 16px;
+    margin: 350px 5px 0 0;
 }
 
-.completed {
-    text-decoration: line-through;
-    color: #999;
+/* Адаптация для планшетов (до 900px) */
+@media (max-width: 900px) {
+    .contentWrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .memWrapper {
+        position: static;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .mem {
+        max-width: 450px;
+        margin-top: 0;
+    }
+    
+    .daysBlock {
+        gap: 10px;
+    }
+    
+    .daysLabel {
+        font-size: 20px;
+    }
+    
+    .daysValue {
+        font-size: 28px;
+    }
+    
+    .daysImage {
+        width: 35px;
+    }
 }
 
-.milestone {
-    margin-left: auto;
-    font-size: 12px;
-    color: #666;
+/* Адаптация для телефонов (до 600px) */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+    
+    .daysBlock {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .daysLabel {
+        font-size: 16px;
+    }
+    
+    .daysValue {
+        font-size: 20px;
+    }
+    
+    .daysImage {
+        width: 28px;
+    }
+    
+    .mem {
+        max-width: 400px;
+    }
+}
+
+/* Очень маленькие телефоны (до 400px) */
+@media (max-width: 400px) {
+    .daysBlock {
+        gap: 6px;
+    }
+    
+    .daysLabel {
+        font-size: 14px;
+    }
+    
+    .daysValue {
+        font-size: 16px;
+    }
+    
+    .daysImage {
+        width: 22px;
+    }
+    
+    .mem {
+        max-width: 350px;
+    }
 }

@@ -3,6 +3,8 @@ import ProgressBar from '../ui/ProgressBar';
 import Checklist from '../ui/Checklist';
 import { steps as initialSteps } from '../../mocks/data';
 import styles from './ProgressPage.module.css';
+import knife from '../../assets/images/knife.png';
+import mem from '../../assets/images/mem.png';
 
 function ProgressPage() {
   const [steps, setSteps] = useState(initialSteps);
@@ -18,27 +20,30 @@ function ProgressPage() {
   const completedCount = steps.filter(step => step.done).length;
   const progressPercent = (completedCount / steps.length) * 100;
   
-  // Оставшиеся дни (пример)
-  const remainingDays = 45; // или посчитай из дат
+  const remainingDays = 45;
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Текущий прогресс</h1>
+      <div className={styles.progressSection}>
+        <ProgressBar percent={progressPercent} />
+      </div>
       
-      <div className={styles.stats}>
-        <div className={styles.statCard}>
-          <span className={styles.statValue}>{progressPercent}%</span>
-          <span className={styles.statLabel}>Прогресс</span>
+      {/* Осталось дней + ножик в одной строке */}
+      <div className={styles.daysBlock}>
+        <span className={styles.daysLabel}>Осталось:</span>
+        <span className={styles.daysValue}>{remainingDays} дней</span>
+        <img src={knife} alt="ножик" className={styles.daysImage} />
+      </div>
+      
+      {/* Чек-лист и мем */}
+      <div className={styles.contentWrapper}>
+        <div className={styles.checklistWrapper}>
+          <Checklist steps={steps} onToggle={handleToggle} />
         </div>
-        <div className={styles.statCard}>
-          <span className={styles.statValue}>{remainingDays}</span>
-          <span className={styles.statLabel}>Осталось дней</span>
+        <div className={styles.memWrapper}>
+          <img src={mem} alt='mem' className={styles.mem} />
         </div>
       </div>
-
-      <ProgressBar percent={progressPercent} />
-      
-      <Checklist steps={steps} onToggle={handleToggle} />
     </div>
   );
 }
