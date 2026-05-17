@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-route
 import { useState } from 'react';
 import './App.css';
 import Layout from './components/Layout';
+import ChatPage from './components/ChatPage';
 import FormPage from './components/Form';
 import Adaptation from './components/Adaptation';
 import UserCard from './components/UserCard';
@@ -45,6 +46,7 @@ function AppRoutes() {
         <Route path="/connections" element={<ConnectionsPage />} />
       </Route>
       <Route path="/form" element={<FormPage todayTask={todayTask} onSubmit={handleFormSubmit} onClose={handleFormClose} />} />
+      <Route path="/chat" element={<ChatPage />}/>
     </Routes>
   );
 }

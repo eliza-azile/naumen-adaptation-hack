@@ -80,6 +80,11 @@
     border: 2px solid #FF671D;
 }
 
+.chat {
+    width: 130px;
+    margin-top: 130px;
+}
+
 .panda {
     width: 200px;
     position: fixed;
