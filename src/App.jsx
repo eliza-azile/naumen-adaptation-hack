@@ -89,7 +89,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Layout onLogout={handleLogout} />}>
-        <Route index element={<Navigate to="/profile" replace />} />
+        <Route index element={<Navigate to="/adaptation" replace />} />
         <Route path="/profile" element={<UserCard user={user} onStatusChange={handleStatusChange} />} />
         <Route path="/hr" element={<HRDashboard />} />
         <Route path="/adaptation" element={<Adaptation steps={steps} onToggle={handleToggle} />} />
