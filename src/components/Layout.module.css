@@ -5,6 +5,7 @@
 }
 
 .header {
+    position: relative; 
     padding: 3px 15px;
     display: flex;
     align-items: center;
@@ -66,6 +67,26 @@
     background-color: #FF671D;
     color: #FFF;
     font-size: 15px;
+}
+
+.logoutButton {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);  
+  background: #FF6720;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.logoutButton:hover {
+  background: #e55c1a;
 }
 
 .link:hover {

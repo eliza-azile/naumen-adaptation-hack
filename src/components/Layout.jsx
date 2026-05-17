@@ -6,7 +6,7 @@ import panda from '../assets/panda.png';
 import { useState } from "react";
 
 
-function Layout() {
+function Layout({ onLogout }) {  
     const location = useLocation();
     const [showForm, setShowForm] = useState(false);
 
@@ -29,6 +29,10 @@ function Layout() {
                     <img src={logo} alt="Логотип" className={styles.logoImage} />             
                 </Link>
                 <h1 className={styles.title}>{getTitle()}</h1>
+                {/* Добавить кнопку выхода */}
+                <button onClick={onLogout} className={styles.logoutButton}>
+                    Выйти
+                </button>
             </header>
             <div className={styles.container}>
                 <aside className={styles.sidebar}>
