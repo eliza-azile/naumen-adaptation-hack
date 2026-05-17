@@ -113,5 +113,57 @@ export const people = [
 
 ];
 
-export const hrMetrics = [];
-export const ganttData = [];
+export const hrEmotionalState = {
+  good: 70,
+  neutral: 20,
+  bad: 10,
+};
+
+export const hrBurnout = {
+  value: 20,
+  trend: +5,
+};
+
+export const hrFeedback = {
+  positive: 12,
+  neutral: 24,
+  negative: 4,
+};
+
+export const hrRequests = [
+  { name: 'ЛЕГЕНДА', text: 'Я не понимаю, как мне установить “МАКС” на макбук 😭🙏', status: 'new', avatar: '/src/assets/LEGEND.png' },
+  { name: 'ТАРАСОВА О. А.', text: 'Мне не нравятся шутки тимлида на тему моих луков', status: 'completed', avatar: '/src/assets/TARASOVA.png' },
+  { name: 'КАЗИКОВ Н. Н.', text: 'Как сбросить пароль? Желательно везде.', status: 'completed', avatar: '/src/assets/KAZIKOV.png' },
+];
+
+export const hrPopularSections = [
+  { name: 'Знакомства', averageTime: '20 мин' },
+  { name: 'Текущий прогресс', averageTime: '1 час' },
+  { name: 'Мероприятия', averageTime: '30 мин' },
+  { name: 'Моя карточка', averageTime: '10 мин' },
+];
+
+export const ganttData = [
+  {
+    name: 'ЛЕГЕНДА',
+    days: ['completed', 'completed', 'completed', 'completed', 'completed', 'completed', 'future', 'future', 'future', 'future', 'future', 'future'],
+    risk: false,
+  },
+  {
+    name: 'ТАРАСОВА О. А,',
+    days: ['completed', 'completed', 'none', 'partial', 'completed', 'completed', 'future', 'future', 'future', 'future', 'future', 'future'],
+    risk: false,
+    problem: '',
+  },
+  {
+    name: 'КАЗИКОВ Н. Н.',
+    days: ['completed', 'partial', 'completed', 'completed', 'none', 'none', 'future', 'future', 'future', 'future', 'future', 'future'],
+    risk: true,
+    problem: 'Застрял на шаге “Короткий тест по стандартам кода”',
+  }
+];
+
+
+
+
+

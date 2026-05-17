@@ -4,7 +4,7 @@
     background-image: url('/src/assets/decor.png');
     background-repeat: no-repeat;
     background-position: top left;  
-    background-size: 1600px;       
+    background-size: 100%;      
     position: relative;
 }
 
@@ -12,7 +12,7 @@
     padding: 0 20px;
     display: flex;
     align-items: center;
-    gap: 530px;
+    gap: 730px;
     flex-shrink: 0;
 }
 
@@ -48,7 +48,7 @@
     overflow: hidden;
     height: 700px;
     width: 850px;
-    margin: 0 auto;
+    margin:30px auto;
     background: #5DB84559;
     border:2px solid  #5DB84569;
     border-radius: 69px;

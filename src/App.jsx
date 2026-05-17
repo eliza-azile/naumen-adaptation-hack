@@ -10,6 +10,7 @@ import ProgressPage from './components/ProgressPage';
 import EventsPage from './components/EventsPage';
 import ConnectionsPage from './components/ConnectionsPage';
 import futureTask from './assets/futureTask.png';
+import HRDashboard from './components/HRDashboard';
 import { currentUser } from './mocks/data';
 
 
@@ -40,6 +41,7 @@ function AppRoutes() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/profile" replace />} />
         <Route path="/profile" element={<UserCard user={user} onStatusChange={handleStatusChange} />} />
+        <Route path="/hr" element={<HRDashboard />}/>
         <Route path="/adaptation" element={<Adaptation />} />
         <Route path="/progress" element={<ProgressPage />} />
         <Route path="/events" element={<EventsPage todayTask={todayTask} onClose={() => setShowForm(false)} />} />
