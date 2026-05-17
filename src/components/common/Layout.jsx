@@ -1,8 +1,8 @@
 import { NavLink, Outlet, useLocation, Link } from "react-router-dom";
 import styles from './Layout.module.css';
-import logo from '../assets/25-naumen_orange.png';
-import chat from '../assets/chat.png';
-import panda from '../assets/panda.png';
+import logo from '../../assets/images/25-naumen_orange.png';
+import chat from '../../assets/images/chat.png';
+import panda from '../../assets/images/panda.png';
 import { useState } from "react";
 
 

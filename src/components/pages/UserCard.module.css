@@ -1,0 +1,163 @@
+.card {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.headerRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.avatarWrapper {
+    margin-top: 5px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #464646;
+    background-color: none;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avatar {
+    object-fit: cover;
+    display: block;
+    width: 75%;
+    height: 75%;
+}
+
+.mainInfo h2{
+    color: #464646;
+    text-align: start;
+    margin: 20px 0 0 40px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.mainInfo p {
+    margin-left: 40px;
+    text-align: start;
+    text-decoration: underline #FF6720;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    font-size: 20px;
+}
+
+.propertiesGrid {
+    display: grid;
+    text-align: start;
+    grid-template-columns: 330px 1fr;
+    gap: 32px;
+    margin-left: 152px;
+    margin-bottom: 88px;
+    font-size: 20px;
+    color: #464646;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.value {
+    font-weight: 300;
+}
+
+.link {
+    font-weight: 300;
+    color: #FF6720;
+    text-decoration: underline #FF6720;
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: none;
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+
+/* Планшеты (1024px и меньше) */
+@media (max-width: 1024px) {
+    .propertiesGrid {
+        margin-left: 80px;
+        gap: 24px;
+    }
+    
+    .mainInfo h2 {
+        font-size: 28px;
+        margin: 15px 0 0 30px;
+    }
+    
+    .mainInfo p {
+        font-size: 18px;
+        margin-left: 30px;
+    }
+}
+
+/* Планшеты и большие телефоны (768px и меньше) */
+@media (max-width: 768px) {
+    .headerRow {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .avatarWrapper {
+        margin: 0 auto;
+    }
+    
+    .mainInfo h2 {
+        text-align: center;
+        margin: 15px 0 0 0;
+        font-size: 26px;
+    }
+    
+    .mainInfo p {
+        text-align: center;
+        margin: 5px 0 0 0;
+        font-size: 16px;
+    }
+    
+    .propertiesGrid {
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+    
+    .label, .value {
+        font-size: 16px;
+    }
+}
+
+/* Телефоны (576px и меньше) */
+@media (max-width: 576px) {
+    .avatarWrapper {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .mainInfo h2 {
+        font-size: 22px;
+    }
+    
+    .mainInfo p {
+        font-size: 14px;
+    }
+    
+    .propertiesGrid {
+        margin-left: 16px;
+        margin-right: 16px;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+    
+    .label, .value {
+        font-size: 14px;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.percentText {
+  font-size: 32px;
+  font-weight: 800;
+  color: #6AC4B7;
+  min-width: 45px;
+  text-align: right;
+  text-shadow: -2px 3px 4px rgba(0,0,0,0.15);
+}
+
+.progressWrapper {
+  max-width: 855px;
+  flex: 1;
+  height: 40px;
+  background-color: #FF671D17;
+  border: 2px solid #FF6720;
+  border-radius: 38px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #6AC4B7;
+  border: 1px solid #FF6720;
+  border-radius: 38px;
+  transition: width 0.3s ease;
+}

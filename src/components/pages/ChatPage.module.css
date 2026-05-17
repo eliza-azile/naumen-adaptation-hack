@@ -1,0 +1,314 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('/src/assets/decor.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+.header {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 730px;
+    flex-shrink: 0;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logoImage {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.title {
+    color: #FF671D;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.emoji {
+    width: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 700px;
+    width: 850px;
+    margin: 30px auto;
+    background: #5DB84559;
+    border: 2px solid #5DB84569;
+    border-radius: 69px;
+    padding-bottom: 30px;
+}
+
+.chatBox {
+    flex: 1;
+    overflow-y: auto;
+    border-radius: 24px;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    scrollbar-width: none;
+}
+
+.chatBox::-webkit-scrollbar {
+    display: none;
+}
+
+.userMsg {
+    font-size: 24px;
+    font-weight: bold;
+    align-self: flex-start;
+    color: #fff;
+    -webkit-text-stroke: 10px #464646;
+    paint-order: stroke fill;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.botMsg {
+    font-size: 24px;
+    font-weight: bold;
+    align-self: flex-end;
+    color: #FF6720;
+    -webkit-text-stroke: 10px #FFF;
+    paint-order: stroke fill;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.inputWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input {
+    background-color: #FFF;
+    border: 2px solid #FF671D;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    padding: 0 0 0 44px;
+    height: 75px;
+    width: 720px;
+    color: #464646;
+}
+
+.pandaImage {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+
+/* Планшеты (1024px и меньше) */
+@media (max-width: 1024px) {
+    .header {
+        gap: 200px;
+    }
+    
+    .card {
+        width: 700px;
+        height: 600px;
+    }
+    
+    .chatBox {
+        padding: 40px;
+        gap: 40px;
+    }
+    
+    .input {
+        width: 600px;
+        font-size: 18px;
+        height: 60px;
+        padding-left: 30px;
+    }
+    
+    .pandaImage {
+        width: 150px;
+    }
+}
+
+/* Планшеты (850px и меньше) — НАЧИНАЕМ УБИРАТЬ ОБВОДКУ */
+@media (max-width: 850px) {
+    .header {
+        gap: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .emoji {
+        width: 40px;
+    }
+    
+    .card {
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 40px;
+    }
+    
+    .chatBox {
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    /* Убираем обводку */
+    .userMsg, .botMsg {
+        -webkit-text-stroke: 0;
+        font-size: 18px;
+        max-width: 80%;
+        padding: 10px 15px;
+        border-radius: 18px;
+    }
+    
+    .userMsg {
+        background-color: #464646;
+        color: #fff;
+    }
+    
+    .botMsg {
+        background-color: #FFE0C0;
+        color: #FF671D;
+    }
+    
+    .input {
+        width: 80%;
+        font-size: 16px;
+        height: 55px;
+        padding-left: 25px;
+    }
+    
+    .pandaImage {
+        width: 120px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Телефоны (650px и меньше) */
+@media (max-width: 650px) {
+    .header {
+        gap: 30px;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .logoLink {
+        margin-bottom: 0;
+    }
+    
+    .title {
+        font-size: 22px;
+        margin-top: 0;
+        justify-content: center;
+    }
+    
+    .emoji {
+        width: 30px;
+    }
+    
+    .logoImage {
+        height: 30px;
+    }
+    
+    .card {
+        height: 480px;
+        border-radius: 25px;
+        padding-bottom: 15px;
+    }
+    
+    .chatBox {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .userMsg, .botMsg {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .input {
+        width: 95%;
+        font-size: 14px;
+        height: 45px;
+        padding-left: 15px;
+    }
+    
+    .pandaImage {
+        width: 80px;
+    }
+}
+
+/* Очень маленькие телефоны (480px и меньше) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+    
+    .card {
+        height: 420px;
+        border-radius: 20px;
+    }
+    
+    .chatBox {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .userMsg, .botMsg {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .input {
+        font-size: 12px;
+        height: 40px;
+        padding-left: 12px;
+    }
+    
+    .pandaImage {
+        width: 60px;
+    }
+}
+
+/* Самые маленькие */
+@media (max-width: 380px) {
+    .pandaImage {
+        width: 50px;
+    }
+    
+    .userMsg, .botMsg {
+        font-size: 11px;
+    }
+    
+    .chatBox {
+        padding: 10px;
+        gap: 10px;
+    }
+}

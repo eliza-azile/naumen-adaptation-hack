@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { currentUser } from '../mocks/data';
-import UserCard from '../components/UserCard';
+import { currentUser } from '../../mocks/data';
+import UserCard from './UserCard';
 
 
 function ProfilePage() {

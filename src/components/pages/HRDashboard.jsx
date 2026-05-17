@@ -5,7 +5,7 @@ import {
   hrRequests,
   hrPopularSections,
   ganttData,
-} from '../mocks/data';
+} from '../../mocks/data';
 import {
   BarChart,
   Bar,
@@ -16,7 +16,7 @@ import {
   Cell,
 } from 'recharts';
 import styles from './HRDashboard.module.css';
-import nice from '../assets/nice.png';
+import nice from '../../assets/images/nice.png';
 
 const feedbackColors = { positive: '#5DB84579', neutral: '#FFC61D93', negative: '#FF1D1D96' };
 

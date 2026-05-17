@@ -1,9 +1,9 @@
 import { Milestone } from "lucide-react";
-import redPandaImg from '../assets/red-panda-emoji.png';
-import baddyImg from '../assets/baddy.png';
-import legendImg from '../assets/LEGEND.png';
-import tarasovaImg from '../assets/TARASOVA.png';
-import kazikovImg from '../assets/KAZIKOV.png';
+import redPandaImg from '../assets/images/red-panda-emoji.png';
+import baddyImg from '../assets/images/baddy.png';
+import legendImg from '../assets/images/LEGEND.png';
+import tarasovaImg from '../assets/images/TARASOVA.png';
+import kazikovImg from '../assets/images/KAZIKOV.png';
 
 export const currentUser = {
     id: 1,
@@ -22,25 +22,43 @@ export const currentUser = {
 };
 
 export const steps = [
-    {id: 1, title: 'Получить доступ к рабочей почте', done: true, Milestone: 'Доступы и знакомство', day: 1},
-    {id: 2, title: 'Запросить доступ к репозиториям GitHub', done: true, Milestone: 'Доступы и знакомство', day: 1},
-    {id: 3, title: 'Установить IDE и плагины по списку', done: true, Milestone: 'Доступы и знакомство', day: 2},
-    {id: 4, title: 'Найти и скачать все пароли/документы в корпоративной вики', done: true, Milestone: 'Доступы и знакомство', day: 2},
-    {id: 5, title: 'Познакомиться с наставником', done: true, Milestone: 'Доступы и знакомство', day: 2},
-    {id: 6, title: 'Добавиться в командные чаты', done: true, Milestone: 'Доступы и знакомство', day: 2}, 
-    {id: 7, title: 'Посмотреть вводные видео', done: false, Milestone: 'Обучение и процессы', day: 3}, 
-    {id: 8, title: 'Прочитать инструкцию', done: false, Milestone: 'Обучение и процессы', day: 3}, 
-    {id: 9, title: 'Запустить локально проект', done: false, Milestone: 'Обучение и процессы', day: 4}, 
-    {id: 10, title: 'Проверить, что умеешь создавать ветку и делать PR', done: false, Milestone: 'Обучение и процессы', day: 4}, 
-    {id: 11, title: 'Пройти короткий тест по принятым в команде стандартам кода', done: false, Milestone: 'Обучение и процессы', day: 5},
-    {id: 12, title: 'Познакомиться с аналитиком', done: false, Milestone: 'Обучение и процессы', day: 5},
-    {id: 13, title: 'Познакомиться с тимлидом', done: false, Milestone: 'Обучение и процессы', day: 5},   
-]
+    {id: 1, title: 'Получить доступ к рабочей почте', done: true, earlyCompleted: false, Milestone: 'Доступы и знакомство', day: 1},
+    {id: 2, title: 'Запросить доступ к репозиториям GitHub', done: true, earlyCompleted: false, Milestone: 'Доступы и знакомство', day: 1},
+    {id: 3, title: 'Установить IDE и плагины по списку', done: true, earlyCompleted: true, Milestone: 'Доступы и знакомство', day: 2},
+    {id: 4, title: 'Найти и скачать все пароли/документы в корпоративной вики', done: true, earlyCompleted: false, Milestone: 'Доступы и знакомство', day: 2},
+    {id: 5, title: 'Познакомиться с наставником', done: true, earlyCompleted: true, Milestone: 'Доступы и знакомство', day: 2},
+    {id: 6, title: 'Добавиться в командные чаты', done: true, earlyCompleted: false, Milestone: 'Доступы и знакомство', day: 2}, 
+    {id: 7, title: 'Посмотреть вводные видео', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 3}, 
+    {id: 8, title: 'Прочитать инструкцию', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 3}, 
+    {id: 9, title: 'Запустить локально проект', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 4}, 
+    {id: 10, title: 'Проверить, что умеешь создавать ветку и делать PR', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 4}, 
+    {id: 11, title: 'Пройти короткий тест по принятым в команде стандартам кода', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 5},
+    {id: 12, title: 'Познакомиться с аналитиком', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 5},
+    {id: 13, title: 'Познакомиться с тимлидом', done: false, earlyCompleted: false, Milestone: 'Обучение и процессы', day: 5},   
+];
 
 export const events = [
-    {title: 'Панкейк-пати',format:'Приготовление панкейков',hashtags: ['#еда'], needBudget: true, where: 'офис'},
-    {title: 'Чайная церемония',format: 'посиделки в переговорке', hashtags: ['чай'], needBudget: true,where: 'офис/кафе'},
-    {title: 'День кошек в офисе',format: 'выставка кошек',hashtags: ['#кошки'], needBudget: false, where: 'офис'},
+    {
+        title: 'Панкейк-пати',
+        format:'Приготовление панкейков',
+        hashtags: ['#еда'],
+        needBudget: true,
+        where: 'офис'
+    },
+    {
+        title: 'Чайная церемония',
+        format: 'посиделки в переговорке',
+        hashtags: ['чай'], 
+        needBudget: true,
+        where: 'офис/кафе'
+    },
+    {
+        title: 'День кошек в офисе',
+        format: 'выставка кошек',
+        hashtags: ['#кошки'],
+        needBudget: false,
+        where: 'офис'
+    }
 ];
 
 export const interestHashtags = [

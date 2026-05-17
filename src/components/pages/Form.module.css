@@ -1,0 +1,479 @@
+.overlay {
+    min-height: 100vh;
+    background: url('/src/assets/fon.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 3px 15px;
+    display: flex;
+    align-items: center;
+    gap: 750px;
+    flex-shrink: 0;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoImage {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+
+.title {
+    color: #FF671D;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 21px solid #FF671D;
+    border-radius: 164px;
+    background-color: #FFF;
+    color: #464646;
+    width: 557px;
+    max-height: 650px;
+    padding: 65px 75px 30px;
+    margin: 30px auto 0;
+}
+
+h2 {
+    color: #464646;
+    text-align: start;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.emotionScale {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 15px 0 40px;
+    flex-wrap: wrap;
+}
+
+.emotionBtn {
+    color: #464646;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    min-width: 90px;
+    background-color: transparent;
+    border: none;
+}
+
+.emotionBtn.selected .value {
+    display: flex;
+    border-radius: 50%;
+    border: 2px solid #FF671D;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.emoji {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #46464617;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 0 auto;
+    color: #464646;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin: 3px 85px 50px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.taskBlock {
+    text-align: start;
+    margin: 0 85px;
+}
+
+.taskTitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.taskContent {
+    font-size: 24px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.taskImage {
+    width: 85px;
+    height: auto;
+}
+
+.submitBtn {
+    width: 300px;
+    background-color: #FF671D;
+    color: #FFF;
+    border: 6px solid #FF671D;
+    border-radius: 6px;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 30px auto 0;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: transparent;
+    border: 3px solid #FF671D;
+    color: #FF671D;
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+
+/* Планшеты (1024px и меньше) */
+@media (max-width: 1024px) {
+    .header {
+        gap: 300px;
+    }
+    
+    .modal {
+        width: 500px;
+        padding: 50px 50px 30px;
+    }
+    
+    .checkboxLabel {
+        margin: 3px 40px 50px;
+    }
+    
+    .taskBlock {
+        margin: 0 40px;
+    }
+}
+
+/* Планшеты (768px и меньше) */
+@media (max-width: 768px) {
+    .header {
+        gap: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .title {
+        font-size: 28px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .modal {
+        width: 85%;
+        padding: 40px 30px 30px;
+        border-radius: 80px;
+        max-height: none;
+        align-items: center;
+    }
+    
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .emotionScale {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .emoji {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .value {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .textarea {
+        max-width: 100%;
+        min-width: 200px;
+    }
+    
+    .checkboxLabel {
+        margin: 3px 20px 30px;
+        font-size: 16px;
+    }
+    
+    .taskBlock {
+        margin: 0 20px;
+        width: 100%;
+    }
+    
+    .taskTitle {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .taskContent {
+        font-size: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .taskImage {
+        width: 70px;
+    }
+    
+    .submitBtn {
+        width: 250px;
+        font-size: 20px;
+        padding: 15px 0;
+    }
+}
+
+/* Телефоны (576px и меньше) */
+@media (max-width: 576px) {
+    .header {
+        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    .modal {
+        width: 90%;
+        padding: 25px 20px 20px;
+        border-width: 12px;
+        border-radius: 50px;
+        margin: 20px auto 0;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    .emotionScale {
+        gap: 10px;
+    }
+    
+    .emotionBtn {
+        min-width: 65px;
+    }
+    
+    .emoji {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .value {
+        font-size: 16px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .textarea {
+        font-size: 14px;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .checkboxLabel {
+        margin: 3px 10px 25px;
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .taskBlock {
+        margin: 0 10px;
+    }
+    
+    .taskTitle {
+        font-size: 16px;
+    }
+    
+    .taskContent {
+        font-size: 14px;
+        gap: 12px;
+        flex-direction: column;
+    }
+    
+    .taskImage {
+        width: 50px;
+    }
+    
+    .submitBtn {
+        width: 180px;
+        font-size: 16px;
+        padding: 10px 0;
+        border-width: 4px;
+    }
+}
+
+/* Очень маленькие телефоны (400px и меньше) */
+@media (max-width: 400px) {
+    .modal {
+        padding: 20px 15px 15px;
+    }
+    
+    .emotionBtn {
+        min-width: 55px;
+    }
+    
+    .emoji {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .value {
+        font-size: 14px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    .textarea {
+        font-size: 12px;
+    }
+    
+    .taskTitle {
+        font-size: 14px;
+    }
+    
+    .taskContent {
+        font-size: 12px;
+    }
+    
+    .submitBtn {
+        width: 160px;
+        font-size: 14px;
+    }
+}
+
+/* Модалка успеха */
+.successModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 21px solid #FF671D;
+    border-radius: 164px;
+    background-color: #FFF;
+    width: 557px;
+    padding: 65px 75px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.successTitle {
+    color: #464646;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.successText {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.backButton {
+    background: #FF671D;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.backButton:hover {
+    background: #e55a10;
+    transform: translateY(-2px);
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .successModal {
+        width: 90%;
+        padding: 40px 30px;
+        border-radius: 80px;
+    }
+    
+    .successTitle {
+        font-size: 24px;
+    }
+    
+    .successText {
+        font-size: 14px;
+    }
+}

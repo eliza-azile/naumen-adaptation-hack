@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from '../assets/25-naumen_orange.png';
-import emoji from '../assets/red-panda-emoji.png';
-import panda from '../assets/panda.png';
+import logo from '../../assets/images/25-naumen_orange.png';
+import emoji from '../../assets/images/red-panda-emoji.png';
+import panda from '../../assets/images/panda.png';
 import styles from './ChatPage.module.css';
 
 
